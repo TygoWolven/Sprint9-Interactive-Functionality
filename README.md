@@ -52,3 +52,6 @@ Een soort strategie dat is gefocust op de inhoud van de pagina, om deze altijd o
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
+
+<img width="50" src="https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/05d39e3c-3021-4a37-b247-1cfa1c8adc19">
+
