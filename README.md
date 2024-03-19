@@ -1,8 +1,6 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
-
 Platform: Buurtinitiatieven Amsterdam West
 
 Deze pagina is bedoeld als een soort Marktplaats, maar dan voor diensten in de buurt.
@@ -10,27 +8,32 @@ Deze pagina is bedoeld als een soort Marktplaats, maar dan voor diensten in de b
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
   * [Kenmerken](#kenmerken)
   * [Installatie](#installatie)
-  * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Mijn pagina ziet er als volgt uit:
 
-## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/95c27169-4f52-41fa-8749-281c2e1c9fcf)
+
+![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/deedb58a-fec4-4740-a473-497dec36da34)
+
+![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/839a6d91-e145-4ff5-a6ce-ad347bedcda5)
+
+![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/5a1fa785-1997-40d0-b4d6-9cb024219b7a)
+
+![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/183124ce-4b95-40e0-a2a7-961b1e768d05)
+
+Deze is ook live te bekijken: https://apricot-cygnet-kit.cyclic.app/
 
 ## Kenmerken
 
-**Code Tools** <br>
+### Code Tools
 Visual Studio Code <br>
 Google Chrome
 
-**Code Talen** <br>
+### Code Talen
 HTML <br>
 CSS <br>
 JS
@@ -38,20 +41,12 @@ JS
 EJS <br>
 JSON <br>
 Node.JS<br>
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
-**Progressive Enhancement:** <br>
-Een soort strategie dat is gefocust op de inhoud van de pagina, om deze altijd op de juiste manier te laten werken voor iedereen. Het idee hierbij is om de ervaring van iedere gebruiker te verbeteren, ongeacht welke browser of apparaat in gebruik is.
+Ik maak gebruik van een onepage-layout. Hierbij heb ik verschillende sections waarmee ik ook de navigatie heb opgezet. De bedoeling hiervan is dat elke section zijn eigen onderwerp heeft, waardoor de pagina makkelijk op te zetten is, en alles mooi ruimtelijk opgezet staat.
 
 ## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
-
-
-## Bronnen
+Je kan aan dit project verder werken door het te forken, en vervolgens te clonen naar je lokale apparaat. Zodra je dit hebt gedaan is het belangerijk om in je Terminal (CTRL +  `) een 'npm install' uit te voeren. Hiermee maak je het mogelijk om een lokale server op te zetten om je veranderingen te bekijken. Deze lokale server start je door 'npm start'.
 
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
-
-<img width="50" src="https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/05d39e3c-3021-4a37-b247-1cfa1c8adc19">
-
