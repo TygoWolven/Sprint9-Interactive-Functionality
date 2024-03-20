@@ -174,12 +174,9 @@ section {
     position: fixed;
     left: 0;
     right: 0;
-    width: fit-content;
     z-index: 100;
-    margin: 1em auto;
     justify-content: space-between;
 
-    border-radius: var(--round);
     box-shadow: var(--shadow);
     background: var(--lightgrey);
 

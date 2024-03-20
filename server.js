@@ -32,6 +32,14 @@ app.get('/', function(request, response) {
 	})
 })
 
+app.get('/aanvraag', function(request, response) {
+	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
+		response.render('aanvraag', {
+			hallenData: HallenDataUitDeAPI.data,
+		})
+	})
+})
+
 // Maak een POST route voor de index
 app.post('/', function (request, response) {
 	messages.push(request.body.bericht)
