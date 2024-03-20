@@ -63,7 +63,6 @@
     max-width: 47ch;
 }
 
-
 /* === General Element Styling === */
 i {
     font-size: 2em;
@@ -437,4 +436,24 @@ footer i:hover {
             text-align: left;
         }
     }
+}
+
+
+
+
+
+
+.inputContainer {
+    & label {
+            padding: 8px 16px;
+            background: grey;
+    }
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    box-shadow: 0 0 0 3px orange;
 }
