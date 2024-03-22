@@ -40,28 +40,8 @@
              Aanbod
       </label>
     </div>
-  </section>
 
-
-  <!-- Activity Section -->
-  <section id="activity">
-
-    <!-- Section Tag -->
-    <p class="sectionTag capsLock extraBold" 
-       aria-hidden="true">
-       Vraag en Aanbod
-    </p>
-    <!-- Section Number -->
-    <p class="sectionNumber extraBold"
-       aria-hidden="true">
-       01
-    </p>
-
-    <!-- Section Title -->
-    <h2><span class="extraThin">Bekijk onze diverse</span> initiatieven</h2>
-
-    <h3 class="listTitle"><span class="extraThin">Dit is wat mensen</span> vragen</h3>
-    <ul class="activityList flexLayout">
+    <ul class="flexLayout" id="listVraag">
       <% hallenData.forEach(function(database) { %>
         <% if (database.type == 'vraag' ) { %>
           <li class="activityItem">
@@ -100,8 +80,7 @@
       <% }) %>
     </ul>
 
-    <h3 class="listTitle"><span class="extraThin">Dit is wat mensen</span> aanbieden</h3>
-    <ul class="activityList flexLayout">
+    <ul class="flexLayout listAanbod">
       <% hallenData.forEach(function(database) { %>
         <% if (database.type == 'aanbod' ) { %>
           <li class="activityItem">
@@ -130,7 +109,6 @@
       <% }) %>
     </ul>
   </section>
-
 
   <!-- Submit Activity Section -->
   <section id="submitactivity">
