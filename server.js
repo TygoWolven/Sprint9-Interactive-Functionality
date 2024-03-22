@@ -25,9 +25,33 @@ const messages = []
 // TODO: routes voor deze pizza applicatie..	
 app.get('/', function(request, response) {
 	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
-		response.render('index', {
+		response.render('home', {
 			hallenData: HallenDataUitDeAPI.data,
 			messages: messages
+		})
+	})
+})
+
+app.get('/about', function(request, response) {
+	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
+		response.render('about', {
+			hallenData: HallenDataUitDeAPI.data,
+		})
+	})
+})
+
+app.get('/vraag-aanbod', function(request, response) {
+	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
+		response.render('vraag-aanbod', {
+			hallenData: HallenDataUitDeAPI.data,
+		})
+	})
+})
+
+app.get('/initiatief/:initiatief', function(request, response) {
+	fetchJson('https://fdnd-agency.directus.app/items/dh_services?filter={"id":' + request.params.initiatief + '}').then((HallenDataUitDeAPI) => {
+		response.render('initiatief', {
+			hallenData: HallenDataUitDeAPI.data[0]
 		})
 	})
 })
@@ -40,20 +64,28 @@ app.get('/aanvraag', function(request, response) {
 	})
 })
 
+app.get('/contact', function(request, response) {
+	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
+		response.render('contact', {
+			hallenData: HallenDataUitDeAPI.data,
+		})
+	})
+})
+
+app.get('/faq', function(request, response) {
+	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
+		response.render('faq', {
+			hallenData: HallenDataUitDeAPI.data,
+		})
+	})
+})
+
 // Maak een POST route voor de index
 app.post('/', function (request, response) {
 	messages.push(request.body.bericht)
 	
 	response.redirect(303, '/')
   })
-
-app.get('/initiatief/:initiatief', function(request, response) {
-	fetchJson('https://fdnd-agency.directus.app/items/dh_services?filter={"id":' + request.params.initiatief + '}').then((HallenDataUitDeAPI) => {
-		response.render('initiatief', {
-			hallenData: HallenDataUitDeAPI.data[0]
-		})
-	})
-})
 
 // Poortnummer voor de LocalHost
 app.set('port', process.env.PORT || 8000)

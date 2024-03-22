@@ -8,7 +8,7 @@
 :root {
     /* === Colors === */
     --grey: #c9c9c9;
-    --lightgrey: #dde1e7;
+    --lightgrey: #d2d6d2;
     --darkgrey: #383838;
 
     --hovercolor: #74836e;
@@ -170,16 +170,13 @@ section {
 
 /* === Navigation === */
 .primary-navigation {
-    flex-direction: column;
+    display: flex;
     position: fixed;
     left: 0;
     right: 0;
     z-index: 100;
     justify-content: space-between;
-
-    box-shadow: var(--shadow);
     background: var(--lightgrey);
-
     transition: var(--tran1);
 }
 
@@ -203,11 +200,10 @@ section {
 /* === Home Section === */
 #home {
     position: fixed;
-    background: linear-gradient( to right,
-        var(--lightgrey) 99%,
-        var(--grey) 99%
+    background: linear-gradient(
+        white,
+        var(--lightgrey)
     );
-    background-size: 60px;
 }
 
 #homecover {
@@ -215,24 +211,14 @@ section {
     box-shadow: var(--shadow);
 }
 
-.titleWrapper {
-    position: relative;
-    align-items: center;
-    width: 80%;
-    height: 60%;
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.25em;
+}
 
-    box-shadow: var(--shadow) inset;
-    border-radius: var(--round);
-    background: var(--lightgrey);
-
-    & h1 {
-        font-size: 2.5em;
-        margin-bottom: 0.25em;
-    }
-
-    & div {
-        margin-left: 10em;
-    }
+h1 span {
+    letter-spacing: 25px;
+    font-size: 0.5em;
 }
 
 .stripedBackground {
@@ -241,29 +227,6 @@ section {
     var(--grey) 99%
     );
     background-size: 60px;  
-}
-
-.circle3D {
-    position: absolute;
-    aspect-ratio: 1;
-    height: 95%;
-    bottom: -60px;
-    right: -60px;
-    
-    background: var(--lightgrey);
-    border-radius: var(--round);
-    box-shadow: var(--shadow);
-    justify-content: center;
-    align-items: center;
-
-    & img {
-        width: 80%;
-        aspect-ratio: 1;
-        object-fit: cover;
-        border-radius: var(--round);
-        padding: 2em;
-        box-shadow: var(--shadow) inset;
-    }
 }
 
 /* === Activity Section === */
@@ -455,7 +418,12 @@ form {
         border: none;
 
         display: flex;
+        margin: 2em 0;
         flex-direction: column;
+
+        & input, select {
+            margin: 0.25em 0 1em 0;
+        }
     }
 
     & fieldset + fieldset {
