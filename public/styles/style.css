@@ -438,19 +438,31 @@ footer i:hover {
 
 
 
+  /* ######################################################################### */
+ /* ################### Vanaf hier begint de nieuwe code! ################### */
+/* ######################################################################### */
 
+/* === Section for Form === */
+#formSection {
+    min-height: 100vh;
+    height: fit-content;
+}
 
-.inputContainer {
-    & label {
-            padding: 8px 16px;
-            background: grey;
+form {
+    padding: 5em 0;
+
+    & fieldset {
+        border: none;
+
+        display: flex;
+        flex-direction: column;
     }
-}
 
-input[type="radio"] {
-    cursor: pointer;
-}
+    & fieldset + fieldset {
+        display: none;
+    }
 
-input[type="radio"]:checked {
-    box-shadow: 0 0 0 3px orange;
+    & fieldset:valid + fieldset {
+        display: flex;
+    }
 }

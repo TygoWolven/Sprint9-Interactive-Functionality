@@ -2,70 +2,93 @@
 
 <main>
 
-    <section>
-        <h2>Stap 1 - Uw gegevens</h2>
-        <form action="">
-            <label for="Voornaam">Voornaam:</label>
-            <input type="text" id="Voornaam" placeholder="Je naam...">
+    <section id="formSection">
 
-            <label for="Achternaam">Achternaam:</label>
-            <input type="text" id="Achternaam" placeholder="Je achternaam...">
+        <form method="post" action="/">
+            <fieldset>
+                <h2>Stap 1 - Uw gegevens</h2>
+                <label for="Voornaam">Voornaam:</label>
+                <input type="text" id="Voornaam" placeholder="Je naam..." required>
+    
+                <label for="Achternaam">Achternaam:</label>
+                <input type="text" id="Achternaam" placeholder="Je achternaam..." required>
+    
+                <label for="E-mailadres">E-mailadres:</label>
+                <input type="text" id="E-mailadres" placeholder="Je e-mailadres ..." required>
+            </fieldset>
+    
+            <fieldset>
+                <h2>Stap 2 - Soort initiatief</h2>
 
-            <label for="E-mailadres">E-mailadres:</label>
-            <input type="text" id="E-mailadres" placeholder="Je e-mailadres ...">
+                <h3>Wat voor soort initiatief wilt u aanmaken?</h3>
+                <label for="Vraag">
+                    <input type="radio" id="Vraag" name="soortInitiatief" required>
+                    Vraag
+                </label>
+
+                <label for="Aanbod">
+                    <input type="radio" id="Aanbod" name="soortInitiatief" required>
+                    Aanbod
+                </label>
+                
+                <h3>Voor wanneer is het nodig?</h3>
+                <input type="date">
+            </fieldset>
+        
+            <fieldset>
+                <h2>Stap 3 - Initiatief omschrijving</h2>
+                <label for="Titel">Titel:</label>
+                <input type="text" id="Titel" required>
+    
+                <label for="Beschrijving">Beschrijving:</label>
+                <input type="text" id="Beschrijving" required>
+    
+                <label for="Buurt">Buurt:</label>
+                <select id="Buurt">
+                    <option value="">Buurt West</option>
+                    <option value="">Buurt Oost</option>
+                    <option value="">Buurt Noord    </option>
+                </select>
+    
+                <label for="Afbeelding">Afbeelding:</label>
+                <input type="file" id="Afbeelding">
+            </fieldset>
+        
+            <fieldset>
+                <h2>Stap 4 - Categorieën</h2>
+
+                <h3>Voeg passende categorieën toe aan je initiatief:</h3>
+                <label for="Feest">Feest
+                    <input type="checkbox" id="Feest">
+                </label>
+
+                <label for="Buiten">Buiten
+                    <input type="checkbox" id="Buiten">
+                </label>
+
+                <h3>Geselecteerde categorieën:</h3>
+
+                <label for="Controle">
+                <input type="checkbox" id="Controle" required>
+                    Ik heb minstens 1 categorie geselecteerd
+                </label>
+
+            </fieldset> 
+
+            <fieldset>
+                <h2>Stap 5 - Initiatief Overzicht</h2>
+
+                <label for="Controle">
+                <input type="checkbox" id="Controle" required>
+                    Ik heb alles gecontroleerd en is correct
+                </label>
+
+                <button type="submit">
+                    Aanvraag indienen
+                </button>
+            </fieldset> 
         </form>
-    </section>
 
-    <section>
-        <h2>Stap 2 - Soort initiatief</h2>
-        <form action="">
-            <h3>Wat voor soort initiatief wilt u aanmaken?</h3>
-            <label for="Voornaam">Vraag</label>
-            <input type="radio" id="Vraag" name="soortInitiatief">
-
-            <label for="Achternaam">Aanbod</label>
-            <input type="radio" id="Aanbod" name="soortInitiatief">
-
-            <h3>Voor wanneer is het nodig?</h3>
-            <input type="date">
-        </form>
-    </section>
-
-    <section>
-        <h2>Stap 3 - Initiatief omschrijving</h2>
-        <form action="">
-            <label for="Voornaam">Titel:</label>
-            <input type="text" id="Voornaam">
-
-            <label for="Achternaam">Beschrijving:</label>
-            <input type="text" id="Achternaam">
-
-            <label for="Buurt">Buurt:</label>
-            <select id="Buurt">
-                <option value="">Buurt West</option>
-                <option value="">Buurt Oost</option>
-                <option value="">Buurt Noord    </option>
-            </select>
-
-            <label for="Afbeelding">Afbeelding:</label>
-            <input type="file" id="Afbeelding">
-        </form>
-    </section>
-
-    <section>
-        <h2>Stap 4 - Categorieën</h2>
-        <h3>Voeg passende categorieën toe aan je initiatief:</h3>
-        <label for="Feest">Feest</label>
-        <input type="checkbox" id="Feest">
-
-        <label for="Buiten">Buiten</label>
-        <input type="checkbox" id="Buiten">
-
-        <h3>Geselecteerde categorieën:</h3>
-    </section>
-
-    <section>
-        <h2>Stap 5 - Initiatief overzicht</h2>
     </section>
 
 </main>
