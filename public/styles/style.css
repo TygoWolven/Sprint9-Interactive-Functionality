@@ -46,13 +46,7 @@ i {
     font-size: 2em;
 }
 
-a, i {
-    transition: var(--tran1);
-}
 
-h2 {
-    margin: 0.5em 0;
-}
 
 .sectionTag {
     position: relative;
@@ -76,19 +70,10 @@ h2 {
     width: 50%;
     height: 100%;
 
-    transition: var(--tran1);
     transform: skew(20deg);
     opacity: 75%;
 
     animation: sectionTagGlint 5s ease infinite;    
-}
-
-.sectionNumber {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    
-    font-size: 5em;
 }
 
 .Btn {
@@ -96,7 +81,6 @@ h2 {
     background: none;
 
     padding: 1em;
-    transition: var(--tran1);
     border-radius: var(--round);
 }
 
@@ -127,7 +111,6 @@ h2 {
     right: 0;
     z-index: 100;
     justify-content: space-between;
-    transition: var(--tran1);
 }
 
 .navigation {
@@ -152,12 +135,6 @@ h1 {
 h1 span {
     letter-spacing: 25px;
     font-size: 0.5em;
-}
-
-/* === Activity Section === */
-#services {
-    height: fit-content;
-    padding: 125px 0 200px 0;
 }
 
 .listTitle {
@@ -218,22 +195,6 @@ h1 span {
     }
 }
 
-.formWrapper {
-    position: relative;
-    width: fit-content;
-    height: 100%;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    transition: var(--tran1);
-    margin: 1em;
-
-    & form {
-        text-align: center;
-        padding: 2em;
-    }
-}
-
 .submitContent div {
     position: relative;
     align-items: center;
@@ -263,35 +224,6 @@ textarea {
     }
 }
 
-/* === Footer === */
-footer { 
-    position: relative;
-    z-index: 100;
-
-    & > div {
-        padding: 4em;
-        text-align: center;
-    }
-
-    & h3 {
-        margin-bottom: 0.25em;
-    }
-}
-
-/* === Media Query === */
-@media (min-width: 1000px) {
-    /* === Footer === */
-    footer {
-        display: flex;
-        justify-content: center;
-
-        & > div {
-            text-align: left;
-        }
-    }
-}
-
-
 
 
   /* ######################################################################### */
@@ -318,6 +250,7 @@ footer {
 /* === Navigation === */
 .primary-navigation {
     display: flex;
+    background: var(--grey);
 }
 
 .navigation {
@@ -335,6 +268,7 @@ section {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    background: var(--lighttextcolor);
 }
 
 /* === Home Section === */
@@ -342,15 +276,50 @@ section {
     position: fixed;
 }
 
+#homecover {
+    background: none;
+}
+
 /* === Services Section === */
 #services {
+    display: flex;
+    flex-direction: row;
+    background: var(--grey);
+}
 
+#services > div:first-child {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--darkgrey);
+    position: relative;
+
+    & p {
+        max-width: 37ch;
+        margin: 0.5em 0;
+    }
+}
+
+.inputcontainer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    background: var(--grey);
+}
+
+#services > div:last-child {
+    width: 70%;
 }
 
 #listVraag,
-#listAanbod,
-#listError {
+#listAanbod {
     display: none;
+}
+#listError {
+    text-align: center;
 }
 
 /* === Submit Service Section === */
@@ -388,8 +357,45 @@ form {
     }
 }
 
+/* === Footer === */
+footer { 
+    background: var(--grey);
+    position: relative;
+    z-index: 100;
+
+    & > div {
+        padding: 4em;
+        text-align: center;
+    }
+
+    & h3 {
+        margin-bottom: 0.25em;
+    }
+}
+
 /* === All Hover-States === */
 a:hover,
 i:hover {
     color: var(--hovercolor);
+}
+
+/* === All Transitions === */
+a, 
+i,
+.Btn,
+.sectionTag::before {
+    transition: var(--tran1);
+}
+
+/* === Media Query === */
+@media (min-width: 1000px) {
+    /* === Footer === */
+    footer {
+        display: flex;
+        justify-content: center;
+
+        & > div {
+            text-align: left;
+        }
+    }
 }

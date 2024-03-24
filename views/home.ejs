@@ -21,108 +21,104 @@
 
   <section id="services">
     <div>
-      <h2>Onze initiatieven</h2>
-      <p>Wij bieden een ruim aanbod aan initiatieven. Ben je op zoek naar een vraag of een aanbod?</p>
-
-      <div class="inputContainer">
-        <input type="radio" 
-               id="Vraag" 
-               value="vraag"
-               name="soortInitiatief"
-               onclick="showList(1)">
-        <label for="Vraag"
+      <div>
+        <h2>Onze initiatieven</h2>
+        <p>Wij bieden een ruim aanbod aan initiatieven. Ben je op zoek naar een vraag of een aanbod?</p>
+      </div>
+      <div class="inputcontainer">
+        <label for="vraag"
                class="extraBold">
+                  <input type="radio" 
+                         id="vraag" 
+                         name="soortInitiatief"
+                         onclick="showList(1)">
                Vraag
         </label>
-        <input type="radio" 
-               id="Aanbod" 
-               value="aanbod"
-               name="soortInitiatief"
-               onclick="showList(2)">
         <label for="Vraag"
                class="extraBold">
-               Aanbod
+                  <input type="radio" 
+                         id="Aanbod" 
+                         name="soortInitiatief"
+                         onclick="showList(2)">
+              Aanbod
         </label>
       </div>
     </div>
 
-    <ul id="listVraag">
-      <% hallenData.forEach(function(database) { %>
-        <% if (database.type == 'vraag' ) { %>
-          <li class="activityItem">
-            <% if (database.image) { %>
-              <img src="https://fdnd-agency.directus.app/assets/<%= database.image %>" alt="Afbeelding voor het initiatief">
-            <% } %>
-
-            <div class="description">
-              <a href="/initiatief/<%= database.id %>"><h3 class="capsLock"><%= database.title %></h3></a>
-
-              <% if (database.start_date) { %>
-                <p>
-                  <span><%= database.start_date %>
-                  <% if (database.end_date) { %>
-                    tot <%= database.end_date %></span>
-                  <% } %>
-                </p>
+    <div>
+      <p id="listError">Er zijn nog geen initiatieven geselecteerd.</p>
+      <ul id="listVraag">
+        <% hallenData.forEach(function(database) { %>
+          <% if (database.type == 'vraag' ) { %>
+            <li class="activityItem">
+              <% if (database.image) { %>
+                <img src="https://fdnd-agency.directus.app/assets/<%= database.image %>" alt="Afbeelding voor het initiatief">
               <% } %>
-              
-              <p><%- database.short_description %></p>
-            </div>
-
-            <a href="/initiatief/<%= database.id %>"><button class="Btn capsLock extraBold">Meer informatie</button></a>
-          </li>
-        <% } %>
-      <% }) %>
-      <% messages.forEach(message => { %>
-        <li class="activityPostedItem">
-          <div class="description">
-            <h3 class="capsLock"><%= message[0] %></h3>              
-            <p><%= message[1] %> tot <%= message[2] %></p>
-            <p><%= message[3] %></p>
-            <a href="/#contact"><button class="Btn capsLock extraBold">Contact</button></a>
-          </div>
-        </li>
-      <% }) %>
-    </ul>
-
-    <ul id="listAanbod">
-      <% hallenData.forEach(function(database) { %>
-        <% if (database.type == 'aanbod' ) { %>
-          <li class="activityItem">
-            <% if (database.image) { %>
-              <img src="https://fdnd-agency.directus.app/assets/<%= database.image %>" alt="Afbeelding voor het initiatief">
-            <% } %>
-
+  
+              <div class="description">
+                <a href="/initiatief/<%= database.id %>"><h3 class="capsLock"><%= database.title %></h3></a>
+  
+                <% if (database.start_date) { %>
+                  <p>
+                    <span><%= database.start_date %>
+                    <% if (database.end_date) { %>
+                      tot <%= database.end_date %></span>
+                    <% } %>
+                  </p>
+                <% } %>
+                
+                <p><%- database.short_description %></p>
+              </div>
+  
+              <a href="/initiatief/<%= database.id %>"><button class="Btn capsLock extraBold">Meer informatie</button></a>
+            </li>
+          <% } %>
+        <% }) %>
+        <% messages.forEach(message => { %>
+          <li class="activityPostedItem">
             <div class="description">
-              <a href="/initiatief/<%= database.id %>"><h3 class="capsLock"><%= database.title %></h3></a>
-
-              <% if (database.start_date) { %>
-                <p>
-                  <span><%= database.start_date %>
-                  <% if (database.end_date) { %>
-                    tot <%= database.end_date %></span>
-                  <% } %>
-                </p>
-              <% } %>
-              
-              <p><%- database.short_description %></p>
+              <h3 class="capsLock"><%= message[0] %></h3>              
+              <p><%= message[1] %> tot <%= message[2] %></p>
+              <p><%= message[3] %></p>
+              <a href="/#contact"><button class="Btn capsLock extraBold">Contact</button></a>
             </div>
-
-            <a href="/initiatief/<%= database.id %>"><button class="Btn capsLock extraBold">Meer informatie</button></a>
           </li>
-        <% } %>
-      <% }) %>
-    </ul>
+        <% }) %>
+      </ul>
+  
+      <ul id="listAanbod">
+        <% hallenData.forEach(function(database) { %>
+          <% if (database.type == 'aanbod' ) { %>
+            <li class="activityItem">
+              <% if (database.image) { %>
+                <img src="https://fdnd-agency.directus.app/assets/<%= database.image %>" alt="Afbeelding voor het initiatief">
+              <% } %>
+  
+              <div class="description">
+                <a href="/initiatief/<%= database.id %>"><h3 class="capsLock"><%= database.title %></h3></a>
+  
+                <% if (database.start_date) { %>
+                  <p>
+                    <span><%= database.start_date %>
+                    <% if (database.end_date) { %>
+                      tot <%= database.end_date %></span>
+                    <% } %>
+                  </p>
+                <% } %>
+                
+                <p><%- database.short_description %></p>
+              </div>
+  
+              <a href="/initiatief/<%= database.id %>"><button class="Btn capsLock extraBold">Meer informatie</button></a>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+    </div>
   </section>
 
   <!-- Submit Activity Section -->
   <section id="submitservice">
-
-    <!-- Section Number -->
-    <p class="sectionNumber extraBold"
-       aria-hidden="true">
-       02
-    </p>
 
     <!-- Section Title -->
     <div class="submitContent flexLayout">

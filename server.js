@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: true}))
 const messages = [] 
 
 // TODO: routes voor deze pizza applicatie..	
-app.get('/', function(request, response) {
+app.get('/home', function(request, response) {
 	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
 		response.render('home', {
 			hallenData: HallenDataUitDeAPI.data,
@@ -35,14 +35,6 @@ app.get('/', function(request, response) {
 app.get('/about', function(request, response) {
 	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
 		response.render('about', {
-			hallenData: HallenDataUitDeAPI.data,
-		})
-	})
-})
-
-app.get('/vraag-aanbod', function(request, response) {
-	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
-		response.render('vraag-aanbod', {
 			hallenData: HallenDataUitDeAPI.data,
 		})
 	})
