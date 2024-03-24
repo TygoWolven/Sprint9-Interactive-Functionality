@@ -7,11 +7,12 @@
 /* === Custom Properties === */
 :root {
     /* === Colors === */
-    --grey: #c9c9c9;
-    --lightgrey: #d2d6d2;
-    --darkgrey: #383838;
+    --darktextcolor: #151515;
+    --lighttextcolor: #EBEBEB;
+    --hovercolor: #74836E;
 
-    --hovercolor: #74836e;
+    --grey: #DDDDDD;
+    --darkgrey: #505050;
 
     /* === Padding & Margin === */
     --padding: 8px 16px;
@@ -19,34 +20,11 @@
     /* === Borders === */
     --round: 500px;
 
-    /* === Box-Shadows === */
-    --shadow: -10px -10px 14px #FFFFFF73, 10px 10px 14px #6b717c49;
-
     /* === Transitions === */
     --tran1: 0.5s ease;
 }
 
-/* === General Page Styling === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-
-    font-family: Roboto;
-    color: var(--darkgrey);
-    text-decoration: none;
-    list-style: none;
-}
-
-*::-webkit-scrollbar {
-    display: none;
-}
-
 /* === General Classes === */
-.extraThin {
-    font-weight: 300;
-}
 .extraBold {
     font-weight: 900;
 }
@@ -76,35 +54,16 @@ h2 {
     margin: 0.5em 0;
 }
 
-.active {
-    box-shadow: var(--shadow);
-}
-
-section {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--lightgrey);
-}
-
 .sectionTag {
     position: relative;
     overflow: hidden;
     z-index: 25;
 
     padding: var(--padding);
-    color: var(--darkgrey);
     width: fit-content;
 
     border-radius: var(--round);
     pointer-events: none;
-    box-shadow: var(--shadow);
 }
 
 .sectionTag::before {
@@ -117,7 +76,6 @@ section {
     width: 50%;
     height: 100%;
 
-    background: var(--grey);
     transition: var(--tran1);
     transform: skew(20deg);
     opacity: 75%;
@@ -131,7 +89,6 @@ section {
     left: 25px;
     
     font-size: 5em;
-    color: var(--darkgrey);
 }
 
 .Btn {
@@ -139,14 +96,8 @@ section {
     background: none;
 
     padding: 1em;
-    color: var(--darkgrey);
     transition: var(--tran1);
     border-radius: var(--round);
-}
-
-.Btn:hover {
-    cursor: pointer;
-    box-shadow: var(--shadow);
 }
 
 .backBtn {
@@ -176,7 +127,6 @@ section {
     right: 0;
     z-index: 100;
     justify-content: space-between;
-    background: var(--lightgrey);
     transition: var(--tran1);
 }
 
@@ -191,26 +141,9 @@ section {
             border-radius: var(--round);
         }
     }
-
-    & li a:hover {
-        box-shadow: var(--shadow);
-    }
 }
 
 /* === Home Section === */
-#home {
-    position: fixed;
-    background: linear-gradient(
-        white,
-        var(--lightgrey)
-    );
-}
-
-#homecover {
-    background: none;
-    box-shadow: var(--shadow);
-}
-
 h1 {
     font-size: 2.5em;
     margin-bottom: 0.25em;
@@ -221,19 +154,10 @@ h1 span {
     font-size: 0.5em;
 }
 
-.stripedBackground {
-    background: linear-gradient( to right,
-    var(--lightgrey) 99%,
-    var(--grey) 99%
-    );
-    background-size: 60px;  
-}
-
 /* === Activity Section === */
 #services {
     height: fit-content;
     padding: 125px 0 200px 0;
-    box-shadow: -10px -10px 15px #6b717c49;
 }
 
 .listTitle {
@@ -247,7 +171,6 @@ h1 span {
     max-width: 23em;
     border-radius: 20px;
     transition: var(--tran1);
-    box-shadow: var(--shadow);
 
     display: grid;
     grid-template-rows: 4fr 3fr 1fr;
@@ -276,7 +199,6 @@ h1 span {
     text-align: center;
     border-radius: 20px;
     transition: var(--tran1);
-    box-shadow: var(--shadow);
     max-width: 23em;
     height: fit-content;
 
@@ -296,17 +218,10 @@ h1 span {
     }
 }
 
-.activityItem:hover,
-.formWrapper:hover {
-    box-shadow: none;
-}
-
 .formWrapper {
     position: relative;
     width: fit-content;
     height: 100%;
-    background: var(--lightgrey);
-    box-shadow: var(--shadow);
     border-radius: 20px;
     justify-content: center;
     align-items: center;
@@ -346,23 +261,12 @@ textarea {
     & ul {
         margin: 0.25em 0 2em 0;
     }
-
-    & a:hover {
-        color: var(--hovercolor);
-    }
 }
 
 /* === Footer === */
-footer {
-    background: linear-gradient( to right,
-        var(--lightgrey) 99%,
-        var(--grey) 99%
-    );
-    background-size: 60px;    
+footer { 
     position: relative;
     z-index: 100;
-    box-shadow: var(--shadow) inset;
-
 
     & > div {
         padding: 4em;
@@ -372,11 +276,6 @@ footer {
     & h3 {
         margin-bottom: 0.25em;
     }
-}
-
-footer a:hover,
-footer i:hover {
-    color: var(--hovercolor);
 }
 
 /* === Media Query === */
@@ -399,8 +298,68 @@ footer i:hover {
  /* ################### Vanaf hier begint de nieuwe code! ################### */
 /* ######################################################################### */
 
-/* === Section for Form === */
-#formSection {
+/* === General Page Styling === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: var(--darktextcolor);
+
+    font-family: Roboto;
+    text-decoration: none;
+    list-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* === Navigation === */
+.primary-navigation {
+    display: flex;
+}
+
+.navigation {
+    display: flex;
+}
+
+/* === All Page Sections === */
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* === Home Section === */
+#home {
+    position: fixed;
+}
+
+/* === Services Section === */
+#services {
+
+}
+
+#listVraag,
+#listAanbod,
+#listError {
+    display: none;
+}
+
+/* === Submit Service Section === */
+#submitservice {
+
+}
+
+/* === Submit Form Section === */
+#submitform {
     min-height: 100vh;
     height: fit-content;
 }
@@ -429,12 +388,8 @@ form {
     }
 }
 
-/* === Section for Vraag & Aanbod === */
-
-#Vraag:checked {
-    box-shadow: 10px 10px 10px red;
-}
-
-#Aanbod:checked {
-    box-shadow: 10px 10px 10px blue;
+/* === All Hover-States === */
+a:hover,
+i:hover {
+    color: var(--hovercolor);
 }

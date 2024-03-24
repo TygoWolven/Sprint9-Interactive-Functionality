@@ -8,40 +8,45 @@
     <!-- Title -->
     <div class="titleWrapper flexLayout">
       <div>
-        <h1 class="capsLock"><span class="extraThin">Platform</span><br>Buurtinitiatieven<br>Amsterdam West</h1>
+        <h1 class="capsLock">Platform<br>Buurtinitiatieven<br>Amsterdam West</h1>
         <p class="textArea">
           Dit platform is gericht naar het aanbieden of aanvragen van diverse buurtinitiatieven. In de meeste gevallen 
           is het moeilijk om de juiste persoon voor jouw klus te vinden, en daarom is dit platform ontwikkeld!
        </p>
       </div>
     </div>
-
   </section>
+
   <section id="homecover"></section>
 
-
   <section id="services">
-    <h2>Onze initiatieven</h2>
-    <p>Wij bieden een ruim aanbod aan initiatieven. Ben je op zoek naar een vraag of een aanbod?</p>
+    <div>
+      <h2>Onze initiatieven</h2>
+      <p>Wij bieden een ruim aanbod aan initiatieven. Ben je op zoek naar een vraag of een aanbod?</p>
 
-    <div class="inputContainer">
-      <input type="radio" 
-             id="Vraag" 
-             name="soortInitiatief">
-      <label for="Vraag"
-             class="extraBold">
-             Vraag
-      </label>
-      <input type="radio" 
-             id="Aanbod" 
-             name="soortInitiatief">
-      <label for="Vraag"
-             class="extraBold">
-             Aanbod
-      </label>
+      <div class="inputContainer">
+        <input type="radio" 
+               id="Vraag" 
+               value="vraag"
+               name="soortInitiatief"
+               onclick="showList(1)">
+        <label for="Vraag"
+               class="extraBold">
+               Vraag
+        </label>
+        <input type="radio" 
+               id="Aanbod" 
+               value="aanbod"
+               name="soortInitiatief"
+               onclick="showList(2)">
+        <label for="Vraag"
+               class="extraBold">
+               Aanbod
+        </label>
+      </div>
     </div>
 
-    <ul class="flexLayout" id="listVraag">
+    <ul id="listVraag">
       <% hallenData.forEach(function(database) { %>
         <% if (database.type == 'vraag' ) { %>
           <li class="activityItem">
@@ -80,7 +85,7 @@
       <% }) %>
     </ul>
 
-    <ul class="flexLayout listAanbod">
+    <ul id="listAanbod">
       <% hallenData.forEach(function(database) { %>
         <% if (database.type == 'aanbod' ) { %>
           <li class="activityItem">
@@ -111,7 +116,7 @@
   </section>
 
   <!-- Submit Activity Section -->
-  <section id="submitactivity">
+  <section id="submitservice">
 
     <!-- Section Number -->
     <p class="sectionNumber extraBold"
@@ -128,26 +133,12 @@
              aria-hidden="true">
              Initiatief Aanvragen
           </p>
-          <h2><span class="extraThin">Ben je op zoek naar een</span> initiatief?</h2>
+          <h2>Ben je op zoek naar een initiatief?</h2>
           <p class="textArea">
             Op zoek naar een balonnenclown? DJ voor een huisfeest? Het maakt niet uit wat! Vul dan het 
             formulier in, en wie weet vind je de juiste persoon waar jij naar op zoek bent.
           </p>  
         </div>  
-      </div>
-      <div class="formWrapper flexLayout">
-        <form method="post" action="/">
-          <h3>Wat heb je nodig?</h3>
-          <textarea rows="3" cols="40" required name="bericht"></textarea> <br><br>
-          
-          <h3>Voor wanneer is dit?</h3>
-          <input type="date" required name="bericht"></input> tot <input type="date" required name="bericht"></input> <br><br>
-
-          <h3>Geef een korte beschrijving:</h3>
-          <textarea rows="10" cols="40" required name="bericht"></textarea> <br><br>
-
-          <button type="submit" class="Btn capsLock extraBold">Aanvraag indienen</button>
-        </form>
       </div>
     </div>
   </section>
