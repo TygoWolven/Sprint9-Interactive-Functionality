@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: true}))
 const messages = [] 
 
 // TODO: routes voor deze pizza applicatie..	
-app.get('/home', function(request, response) {
+app.get('/', function(request, response) {
 	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
 		response.render('home', {
 			hallenData: HallenDataUitDeAPI.data,
