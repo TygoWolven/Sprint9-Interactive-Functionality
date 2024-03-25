@@ -1,4 +1,4 @@
-/* === Fonts === */
+        /* === Fonts === */
 @font-face {
     font-family: Roboto;
     src: url(../fonts/RobotoCondensed-VariableFont_wght.ttf);
@@ -195,13 +195,6 @@ h1 span {
     }
 }
 
-<<<<<<< HEAD
-.activityItem:hover {
-    box-shadow: none;
-}
-
-=======
->>>>>>> 61989d92eb41004be9d42f5ee6bb6f5a6e62655b
 .submitContent div {
     position: relative;
     align-items: center;
@@ -231,49 +224,6 @@ textarea {
     }
 }
 
-<<<<<<< HEAD
-/* === Footer === */
-footer {
-    background: linear-gradient( to right,
-        var(--lightgrey) 99%,
-        var(--grey) 99%
-    );
-    background-size: 60px;    
-    position: relative;
-    z-index: 100;
-    box-shadow: var(--shadow) inset;
-
-    & > div {
-        padding: 4em;
-        text-align: center;
-    }
-
-    & h3 {
-        margin-bottom: 0.25em;
-    }
-}
-
-footer a:hover,
-footer i:hover {
-    color: var(--hovercolor);
-}
-
-/* === Media Query === */
-@media (min-width: 1000px) {
-    /* === Footer === */
-    footer {
-        display: flex;
-        justify-content: center;
-
-        & > div {
-            text-align: left;
-        }
-    }
-}
-
-
-=======
->>>>>>> 61989d92eb41004be9d42f5ee6bb6f5a6e62655b
 
 
   /* ######################################################################### */
