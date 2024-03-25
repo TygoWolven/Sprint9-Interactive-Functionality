@@ -233,7 +233,6 @@ h1 span {
 #services {
     height: fit-content;
     padding: 125px 0 200px 0;
-    box-shadow: -10px -10px 15px #6b717c49;
 }
 
 .listTitle {
@@ -296,27 +295,8 @@ h1 span {
     }
 }
 
-.activityItem:hover,
-.formWrapper:hover {
+.activityItem:hover {
     box-shadow: none;
-}
-
-.formWrapper {
-    position: relative;
-    width: fit-content;
-    height: 100%;
-    background: var(--lightgrey);
-    box-shadow: var(--shadow);
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    transition: var(--tran1);
-    margin: 1em;
-
-    & form {
-        text-align: center;
-        padding: 2em;
-    }
 }
 
 .submitContent div {
@@ -362,7 +342,6 @@ footer {
     position: relative;
     z-index: 100;
     box-shadow: var(--shadow) inset;
-
 
     & > div {
         padding: 4em;

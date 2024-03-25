@@ -41,7 +41,7 @@
       </label>
     </div>
 
-    <ul class="flexLayout" id="listVraag">
+    <ul class="flexLayout">
       <% hallenData.forEach(function(database) { %>
         <% if (database.type == 'vraag' ) { %>
           <li class="activityItem">
@@ -80,7 +80,7 @@
       <% }) %>
     </ul>
 
-    <ul class="flexLayout listAanbod">
+    <ul class="flexLayout">
       <% hallenData.forEach(function(database) { %>
         <% if (database.type == 'aanbod' ) { %>
           <li class="activityItem">
@@ -110,7 +110,7 @@
     </ul>
   </section>
 
-  <!-- Submit Activity Section -->
+  <!--   Activity Section -->
   <section id="submitactivity">
 
     <!-- Section Number -->
@@ -134,20 +134,6 @@
             formulier in, en wie weet vind je de juiste persoon waar jij naar op zoek bent.
           </p>  
         </div>  
-      </div>
-      <div class="formWrapper flexLayout">
-        <form method="post" action="/">
-          <h3>Wat heb je nodig?</h3>
-          <textarea rows="3" cols="40" required name="bericht"></textarea> <br><br>
-          
-          <h3>Voor wanneer is dit?</h3>
-          <input type="date" required name="bericht"></input> tot <input type="date" required name="bericht"></input> <br><br>
-
-          <h3>Geef een korte beschrijving:</h3>
-          <textarea rows="10" cols="40" required name="bericht"></textarea> <br><br>
-
-          <button type="submit" class="Btn capsLock extraBold">Aanvraag indienen</button>
-        </form>
       </div>
     </div>
   </section>
