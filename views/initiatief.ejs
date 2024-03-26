@@ -2,9 +2,9 @@
 
 <!-- Detail Section -->
 <section id="detail">
-  <a href="/#activity"><button class="backBtn Btn capsLock extraBold">Terug</button></a>
+  <a href="/"><button class="backBtn capsLock extraBold">Terug</button></a>
 
-  <div class="titleWrapper stripedBackground flexLayout">
+  <div>
     <div class="description">
       <a href="/initiatief/<%= hallenData.id %>"><h3 class="capsLock"><%= hallenData.title %></h3></a>
 
@@ -19,7 +19,7 @@
       
       <p><%- hallenData.long_description %></p>
     </div>
-    <div class="circle3D flexLayout">
+    <div>
       <% if (hallenData.image) { %>
         <img src="https://fdnd-agency.directus.app/assets/<%= hallenData.image %>">
       <% } %>
