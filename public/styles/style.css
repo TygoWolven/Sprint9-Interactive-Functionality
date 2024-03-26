@@ -280,6 +280,49 @@ section {
     background: none;
 }
 
+.scrollIcons {
+    position: fixed;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & i:first-of-type {
+        animation: mouseHop 1s infinite;
+    }
+
+    & i:last-of-type {
+        position: relative;
+        bottom: 10px;
+        animation: chevronHop 1s infinite;
+    }
+}
+
+@keyframes mouseHop {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0.5em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes chevronHop {
+    0% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(0.5em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 /* === Services Section === */
 #services {
     display: flex;
