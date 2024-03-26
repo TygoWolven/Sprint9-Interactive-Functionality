@@ -1,130 +1,3 @@
-        /* === Fonts === */
-@font-face {
-    font-family: Roboto;
-    src: url(../fonts/RobotoCondensed-VariableFont_wght.ttf);
-}
-
-/* === Custom Properties === */
-:root {
-    /* === Colors === */
-    --darktextcolor: #151515;
-    --lighttextcolor: #EBEBEB;
-    --hovercolor: #74836E;
-
-    --grey: #DDDDDD;
-    --darkgrey: #505050;
-
-    /* === Padding & Margin === */
-    --padding: 8px 16px;
-
-    /* === Borders === */
-    --round: 500px;
-
-    /* === Transitions === */
-    --tran1: 0.5s ease;
-}
-
-/* === General Classes === */
-.extraBold {
-    font-weight: 900;
-}
-
-.capsLock {
-    text-transform: uppercase;
-}
-
-.flexLayout {
-    display: flex;
-}
-
-.textArea {
-    max-width: 47ch;
-}
-
-/* === General Element Styling === */
-i {
-    font-size: 2em;
-}
-
-
-
-.sectionTag {
-    position: relative;
-    overflow: hidden;
-    z-index: 25;
-
-    padding: var(--padding);
-    width: fit-content;
-
-    border-radius: var(--round);
-    pointer-events: none;
-}
-
-.sectionTag::before {
-    content: '';
-    position: absolute;
-    z-index: -25;
-    left: -100%;
-    top: 0;
-
-    width: 50%;
-    height: 100%;
-
-    transform: skew(20deg);
-    opacity: 75%;
-
-    animation: sectionTagGlint 5s ease infinite;    
-}
-
-.Btn {
-    border: none;
-    background: none;
-
-    padding: 1em;
-    border-radius: var(--round);
-}
-
-.backBtn {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-}
-
-/* === Animation for sectionTag === */
-@keyframes sectionTagGlint {
-    0% {
-        left: -110%;
-    }
-    40% {
-        left: 110%;
-    }
-    100% {
-        left: 110%;
-    }
-}
-
-/* === Navigation === */
-.primary-navigation {
-    display: flex;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    justify-content: space-between;
-}
-
-.navigation {
-
-    & li {
-        margin: 0 0.5em;
-        padding: 1.5em;
-
-        & a {
-            padding: 1em;
-            border-radius: var(--round);
-        }
-    }
-}
 
 /* === Home Section === */
 h1 {
@@ -171,23 +44,6 @@ h1 span {
     }
 }
 
-.activityPostedItem {
-    margin: 1em;
-    text-align: center;
-    border-radius: 20px;
-    transition: var(--tran1);
-    max-width: 23em;
-    height: fit-content;
-
-    & .description {
-        margin: 1em;
-
-        & p {
-            margin: 0.5em 0;
-        }
-    }
-}
-
 /* === Detailpage === */
 #detail {
     & p {
@@ -195,40 +51,56 @@ h1 span {
     }
 }
 
-.submitContent div {
-    position: relative;
-    align-items: center;
-    text-align: right;
-    margin: 2em;
-    
-    & .sectionTag {
-        position: absolute;
-        right: 0;
-    }
-
-    & h2 {
-        margin-top: 2em;
-    }
-}
-
-textarea {
-    resize: none;
-}
-
-/* === Contact Section === */
-.contact-container {
-    margin: 2em;
-
-    & ul {
-        margin: 0.25em 0 2em 0;
-    }
-}
-
-
-
   /* ######################################################################### */
  /* ################### Vanaf hier begint de nieuwe code! ################### */
 /* ######################################################################### */
+
+/* === Fonts === */
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/RobotoCondensed-VariableFont_wght.ttf);
+}
+
+/* === Custom Properties === */
+:root {
+    /* === Colors === */
+    --black: #151515;
+    --white: #EBEBEB;
+    --hover: #74836E;
+
+    /* === Padding & Margin === */
+    --padding: 8px 16px;
+
+    /* === Borders === */
+    --round: 500px;
+
+    /* === Transitions === */
+    --tran1: 0.5s ease;
+}
+
+/* === General Classes === */
+.extraBold {
+    font-weight: 900;
+}
+
+.capsLock {
+    text-transform: uppercase;
+}
+
+.textArea {
+    max-width: 47ch;
+}
+
+.backBtn {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+/* === General Element Styling === */
+i {
+    font-size: 2em;
+}
 
 /* === General Page Styling === */
 * {
@@ -236,7 +108,7 @@ textarea {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    color: var(--darktextcolor);
+    color: var(--black);
 
     font-family: Roboto;
     text-decoration: none;
@@ -250,11 +122,25 @@ textarea {
 /* === Navigation === */
 .primary-navigation {
     display: flex;
-    background: var(--grey);
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    z-index: 100;
+    justify-content: space-between;
 }
 
 .navigation {
     display: flex;
+
+    & li {
+        margin: 0 0.5em;
+        padding: 1.5em;
+
+        & a {
+            padding: 1em;
+        }
+    }
 }
 
 /* === All Page Sections === */
@@ -268,7 +154,7 @@ section {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background: var(--lighttextcolor);
+    background: var(--white);
 }
 
 /* === Home Section === */
@@ -278,15 +164,18 @@ section {
 
 #homecover {
     background: none;
+    z-index: -100;
 }
 
 .scrollIcons {
     position: fixed;
     bottom: 25px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    & a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     & p {
         margin-bottom: 1em;
@@ -331,7 +220,6 @@ section {
 #services {
     display: flex;
     flex-direction: row;
-    background: var(--grey);
 }
 
 #services > div:first-child {
@@ -340,7 +228,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--darkgrey);
     position: relative;
 
     & p {
@@ -351,11 +238,9 @@ section {
 
 .inputcontainer {
     position: absolute;
+    display: flex;
     width: 100%;
     bottom: 0;
-
-    background: var(--grey);
-    display: flex;
 
     & label {
         width: 50%;
@@ -383,7 +268,9 @@ section {
 
 /* === Submit Service Section === */
 #submitservice {
-
+    & p {
+        margin: 0.5em 0;
+    }
 }
 
 /* === Submit Form Section === */
@@ -415,9 +302,17 @@ form {
     }
 }
 
+/* === Contact Section === */
+.contact-container {
+    margin: 2em;
+
+    & ul {
+        margin: 0.25em 0 2em 0;
+    }
+}
+
 /* === Footer === */
 footer { 
-    background: var(--grey);
     position: relative;
     z-index: 100;
 
@@ -434,14 +329,12 @@ footer {
 /* === All Hover-States === */
 a:hover,
 i:hover {
-    color: var(--hovercolor);
+    color: var(--hover);
 }
 
 /* === All Transitions === */
 a, 
-i,
-.Btn,
-.sectionTag::before {
+i {
     transition: var(--tran1);
 }
 
