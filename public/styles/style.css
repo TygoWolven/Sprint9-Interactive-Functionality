@@ -107,6 +107,12 @@ section {
 /* === Home Section === */
 #home {
     position: fixed;
+    background: linear-gradient(
+        to right,
+        var(--white) 95%,
+        var(--lightgrey) 95%
+    );
+    background-size: 50px;
 
     & h1 {
         font-size: 2.5em;
@@ -172,7 +178,7 @@ section {
 #services {
     display: flex;
     flex-direction: row;
-    background: var(--lightgrey);
+    background: var(--white);
 }
 
 #services > div:first-child {
@@ -182,7 +188,7 @@ section {
     position: relative;
     align-items: center;
     justify-content: center;
-    background: var(--grey);
+    background: var(--lightgrey);
 
     & p {
         max-width: 37ch;
@@ -201,6 +207,7 @@ section {
         padding: 3em;
         text-align: center;
         cursor: pointer;  
+        background: var(--grey);
     }
 
     & input {
@@ -213,7 +220,7 @@ section {
     text-align: center;
 
     max-width: 23em;
-    border-radius: 20px;
+    background: var(--lightgrey);
 
     display: grid;
     grid-template-rows: 4fr 3fr 1fr;
@@ -223,7 +230,6 @@ section {
         height: 15em;
         margin: 1em;
         object-fit: cover;
-        border-radius: 20px;
     }
     
     & .description {
@@ -232,6 +238,11 @@ section {
         & p {
             margin: 0.5em 0;
         }
+    }
+
+    & button {
+        background: none;
+        border: none;
     }
 }
 
@@ -242,6 +253,7 @@ section {
 #listVraag,
 #listAanbod {
     display: none;
+    overflow: scroll;
 }
 #listError {
     text-align: center;
@@ -256,8 +268,26 @@ section {
 
 /* === Submit Service Section === */
 #submitservice {
+    background: linear-gradient(
+        to right,
+        var(--white) 95%,
+        var(--lightgrey) 95%
+    );
+    background-size: 50px;
+
     & p {
         margin: 0.5em 0;
+    }
+}
+
+#submitContent {
+    padding: 3em;
+    background: var(--lightgrey);
+
+    & button {
+        background: var(--grey);
+        border: none;
+        padding: 1em;
     }
 }
 
@@ -291,6 +321,10 @@ form {
 }
 
 /* === Contact Section === */
+.contact-wrapper {
+    display: flex;
+}
+
 .contact-container {
     margin: 2em;
 
@@ -320,6 +354,10 @@ footer {
 a:hover,
 i:hover {
     color: var(--hover);
+}
+
+.inputcontainer label:hover {
+    background: rgba(189, 189, 189, 0.5);
 }
 
 /* === All Transitions === */
