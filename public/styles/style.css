@@ -107,7 +107,7 @@ section {
 
 /* === Home Section === */
 #home {
-    background: url(/images/dehallenedit.png);
+    background: url(/images/dehallen.png);
     background-position: -50%;
 
     & h1 {
