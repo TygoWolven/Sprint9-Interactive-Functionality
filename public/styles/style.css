@@ -73,8 +73,7 @@ i {
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(220, 220, 220, 0.5);
-    backdrop-filter: blur(10px);
+    background: var(--lightgrey);
     justify-content: space-between;
 }
 
@@ -108,14 +107,7 @@ section {
 /* === Home Section === */
 #home {
     position: fixed;
-    background: linear-gradient(
-        to right,
-        var(--white) 95%,
-        var(--lightgrey) 95%
-    );
-    background-size: 50px;
-
-    background: url(/images/dehallen.jpg);
+    background: none;
 
     & h1 {
         font-size: 2.5em;
@@ -124,8 +116,8 @@ section {
 }
 
 #homecover {
-    background: none;
-    z-index: -100;
+    background: url(/images/dehallenedit.png);
+    z-index: -10;
 }
 
 .scrollIcons {
