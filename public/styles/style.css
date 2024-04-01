@@ -72,7 +72,7 @@ i {
 
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 200;
     background: var(--lightgrey);
     justify-content: space-between;
 }
@@ -109,12 +109,19 @@ section {
     background: url(/images/dehallenedit.png);
 
     & h1 {
-        font-size: 2.5em;
+        font-size: 3em;
         margin-bottom: 0.25em;
-        z-index: 200;
-        position: absolute;
-        left: 10%;
     }
+
+    & p {
+        max-width: 80ch;
+    }
+}
+
+.titleWrapper {
+    position: absolute;
+    z-index: 150;
+    left: 10%;
 }
 
 #homecover {
