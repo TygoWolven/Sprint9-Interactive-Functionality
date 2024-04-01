@@ -8,9 +8,9 @@
 :root {
     /* === Colors === */
     --black: #151515;
-    --white: #EEEEEE;
     --hover: #74836E;
 
+    --white: #EEEEEE;
     --lightgrey: #DBDBDB;
     --grey: #BDBDBD;
 
@@ -106,23 +106,75 @@ section {
 
 /* === Home Section === */
 #home {
-    position: fixed;
-    background: none;
+    background: url(/images/dehallenedit.png);
 
     & h1 {
         font-size: 2.5em;
         margin-bottom: 0.25em;
+        z-index: 200;
+        position: absolute;
+        left: 10%;
     }
 }
 
 #homecover {
-    background: url(/images/dehallenedit.png);
-    z-index: -10;
+    z-index: -100;
+}
+
+.homeBackdrop {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: -45%;
+    transform: rotate(-15deg);
+    background: var(--lightgrey);
+}
+
+.shapeDivider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.shapeDivider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.shapeDivider .shape-fill {
+    fill: #EEEEEE;
+}
+
+.custom-shape-divider-top-1711994287 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1711994287 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1711994287 .shape-fill {
+    fill: #EEEEEE;
 }
 
 .scrollIcons {
-    position: fixed;
+    position: absolute;
     bottom: 25px;
+    z-index: 100;
 
     & a {
         display: flex;
@@ -131,7 +183,7 @@ section {
     }
 
     & p {
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
     }
 
     & i:first-of-type {
@@ -183,8 +235,8 @@ section {
     position: relative;
     align-items: center;
     justify-content: center;
-    background: var(--lightgrey);
-
+    background: var(--white);
+    
     & p {
         max-width: 37ch;
         margin: 0.5em 0;
