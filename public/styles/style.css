@@ -107,6 +107,7 @@ section {
 /* === Home Section === */
 #home {
     background: url(/images/dehallenedit.png);
+    background-position: -50%;
 
     & h1 {
         font-size: 3em;
@@ -137,28 +138,8 @@ section {
     background: var(--lightgrey);
 }
 
-.shapeDivider {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.shapeDivider svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
-
-.shapeDivider .shape-fill {
-    fill: #EEEEEE;
-}
-
-.custom-shape-divider-top-1711994287 {
+.shapeDividerBottom,
+.shapeDividerTop {
     position: absolute;
     top: 0;
     left: 0;
@@ -167,15 +148,22 @@ section {
     line-height: 0;
 }
 
-.custom-shape-divider-top-1711994287 svg {
+.shapeDividerBottom {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.shapeDividerBottom svg,
+.shapeDividerTop svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 150px;
 }
 
-.custom-shape-divider-top-1711994287 .shape-fill {
-    fill: #EEEEEE;
+.shapeDividerBottom .shape-fill,
+.shapeDividerTop .shape-fill {
+    fill: var(--white);
 }
 
 .scrollIcons {
@@ -254,11 +242,9 @@ section {
     position: absolute;
     display: flex;
     width: 100%;
-    bottom: 0;
     
     & label {
-        width: 50%;
-        padding: 3em;
+        padding: 1em 3em;
         text-align: center;
         cursor: pointer;  
         background: var(--grey);
@@ -322,12 +308,7 @@ section {
 
 /* === Submit Service Section === */
 #submitservice {
-    background: linear-gradient(
-        to right,
-        var(--white) 95%,
-        var(--lightgrey) 95%
-    );
-    background-size: 50px;
+    background: var(--lightgrey);
 
     & p {
         margin: 0.5em 0;
@@ -392,7 +373,7 @@ footer {
     position: relative;
     z-index: 100;
 
-    background: var(--lightgrey);
+    background: var(--white);
 
     & > div {
         padding: 4em;
