@@ -114,6 +114,8 @@ section {
     );
     background-size: 50px;
 
+    background: url(/images/dehallen.jpg);
+
     & h1 {
         font-size: 2.5em;
         margin-bottom: 0.25em;
