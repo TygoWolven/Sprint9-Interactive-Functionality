@@ -45,6 +45,13 @@
     left: 25px;
 }
 
+.inputTitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
 /* === General Element Styling === */
 i {
     font-size: 2em;
@@ -74,6 +81,22 @@ button::before {
     transform: skew(15deg);
     transition: var(--tran2);
     z-index: -20;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.25em;
+
+    background: linear-gradient(
+        to right,
+        var(--green) 50%,
+        var(--red) 50%
+    );
+    color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    animation: gradientAnimation 3s linear infinite;
 }
 
 /* === General Page Styling === */
@@ -119,8 +142,6 @@ button::before {
     }
 }
 
-/* === Main Content === */
-
 /* === All Page Sections === */
 section {
     width: 100%;
@@ -139,22 +160,6 @@ section {
 #home {
     background: url(/images/dehallen.png);
     background-position: -50%;
-
-    & h1 {
-        font-size: 3em;
-        margin-bottom: 0.25em;
-
-        background: linear-gradient(
-            to right,
-            var(--green) 50%,
-            var(--red) 50%
-        );
-        color: transparent;
-        background-clip: text;
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        animation: gradientAnimation 3s linear infinite;
-    }
 
     & p {
         max-width: 80ch;
@@ -186,6 +191,12 @@ section {
     height: 200%;
     left: -45%;
     transform: rotate(-15deg);
+    background: var(--lightgrey);
+}
+
+#submitform,
+#contact,
+#faq {
     background: var(--lightgrey);
 }
 
@@ -428,7 +439,6 @@ section {
     background: var(--lightgrey);
 }
 
-
 #submitContent {
     padding: 3em;
     z-index: 100;
@@ -438,7 +448,6 @@ section {
 #submitform {
     min-height: 100vh;
     height: fit-content;
-    background: var(--lightgrey);
 
     & h2 {
         text-align: center;
@@ -454,14 +463,34 @@ form {
 
     & fieldset {
         border: none;
-
         display: flex;
         flex-direction: column;
         margin-top: 5em;
+    }
+}
 
-        & input, select {
-            margin: 0.25em 0 1em 0;
-        }
+.allCategories {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 30em;
+
+    & label {
+        background: var(--green);
+        color: var(--white);
+        padding: 1em;
+        margin-right: 1em;
+        cursor: pointer;
+        transition: var(--tran1);
+        margin-top: 0.5em;
+    }
+
+    & input[type="checkbox"] {
+        display: none;
+    }
+
+    & input:checked + label {
+        transition: var(--tran1);
+        background: var(--red);
     }
 }
 
