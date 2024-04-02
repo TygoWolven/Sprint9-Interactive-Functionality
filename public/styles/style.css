@@ -75,8 +75,9 @@ i {
     left: 0;
     right: 0;
     z-index: 200;
-    background: var(--lightgrey);
+    background: var(--white);
     justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .navigation {
@@ -105,6 +106,7 @@ section {
     flex-direction: column;
     justify-content: center;
     background: var(--white);
+    overflow: hidden;
 }
 
 /* === Home Section === */
@@ -225,6 +227,7 @@ section {
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr;
     background: var(--white);
+    z-index: 50;
 }
 
 #services > div:first-child {
@@ -246,9 +249,12 @@ section {
     
     & label {
         padding: 1em 3em;
+        margin: 0 1em 0 0;
         text-align: center;
         cursor: pointer;  
-        background: var(--grey);
+        background: var(--green);
+        color: var(--white);
+        transition: var(--tran1);
     }
 
     & input {
@@ -307,18 +313,33 @@ section {
 
 /* === Submit Service Section === */
 #submitservice {
-    background: var(--lightgrey);
+    background: url(/images/dekleinehallen.png);
+    background-size: 60%;   
     height: 80vh;
 
     & p {
         margin: 0.5em 0;
         max-width: 50ch;
     }
+
+    & div:first-child {
+        z-index: 10;
+    }
 }
+
+.submitBackdrop {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    right: -30%;
+    transform: rotate(-15deg);
+    background: var(--lightgrey);
+}
+
 
 #submitContent {
     padding: 3em;
-    background: var(--lightgrey);
+    z-index: 100;
 
     & button {
         position: relative;
@@ -395,6 +416,7 @@ form {
 /* === Footer === */
 footer { 
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;   
     z-index: 100;
 
     background: var(--white);
@@ -416,11 +438,15 @@ i:hover {
 }
 
 .inputcontainer label:hover {
-    background: rgba(189, 189, 189, 0.5);
+    background: var(--red);
 }
 
 .activityItem:hover {
     scale: 1.05;
+}
+
+#submitContent button:hover {
+    cursor: pointer;
 }
 
 #submitContent button:hover::before {

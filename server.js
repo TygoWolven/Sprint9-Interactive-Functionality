@@ -32,14 +32,6 @@ app.get('/', function(request, response) {
 	})
 })
 
-app.get('/about', function(request, response) {
-	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
-		response.render('about', {
-			hallenData: HallenDataUitDeAPI.data,
-		})
-	})
-})
-
 app.get('/initiatief/:initiatief', function(request, response) {
 	fetchJson('https://fdnd-agency.directus.app/items/dh_services?filter={"id":' + request.params.initiatief + '}').then((HallenDataUitDeAPI) => {
 		response.render('initiatief', {
