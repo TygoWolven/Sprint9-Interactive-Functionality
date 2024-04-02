@@ -256,10 +256,12 @@ section {
     align-items: center;
     justify-content: center;
     
-    & p {
+    & .serviceP {
         max-width: 37ch;
+        margin: 0.5em 0;
     }
 }
+
 
 .inputcontainer {
     position: absolute;
@@ -342,6 +344,7 @@ section {
     display: none;
     overflow: scroll;
     width: 100%;
+    justify-content: center;
 }
 #listError {
     text-align: center;
