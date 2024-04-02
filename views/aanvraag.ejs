@@ -6,7 +6,7 @@
 
         <form method="post" action="/">
             <fieldset>
-                <h2>Stap 1 - Uw gegevens</h2>
+                <h2>Stap 1<br><span class="capsLock extraBold">Persoonlijke gegevens</span></h2>
                 <label for="Voornaam">Voornaam:</label>
                 <input type="text" id="Voornaam" placeholder="Je naam..." required>
     
@@ -18,7 +18,7 @@
             </fieldset>
     
             <fieldset>
-                <h2>Stap 2 - Soort initiatief</h2>
+                <h2>Stap 2<br><span class="capsLock extraBold">Soort initiatief</span></h2>
 
                 <h3>Wat voor soort initiatief wilt u aanmaken?</h3>
                 <label for="Vraag">
@@ -36,7 +36,7 @@
             </fieldset>
         
             <fieldset>
-                <h2>Stap 3 - Initiatief omschrijving</h2>
+                <h2>Stap 3<br><span class="capsLock extraBold">Initiatief omschrijving</span></h2>
                 <label for="Titel">Titel:</label>
                 <input type="text" id="Titel" required>
     
@@ -55,15 +55,35 @@
             </fieldset>
         
             <fieldset>
-                <h2>Stap 4 - Categorieën</h2>
+                <h2>Stap 4<br><span class="capsLock extraBold">Categorieën</span></h2>
 
                 <h3>Voeg passende categorieën toe aan je initiatief:</h3>
-                <label for="Feest">Feest
-                    <input type="checkbox" id="Feest">
+                <label for="Tech">Technologie
+                    <input type="checkbox" id="Tech">
                 </label>
 
-                <label for="Buiten">Buiten
-                    <input type="checkbox" id="Buiten">
+                <label for="Kunst">Kunst en Cultuur
+                    <input type="checkbox" id="Kunst">
+                </label>
+
+                <label for="Sport">Sport en Recreatie
+                    <input type="checkbox" id="Sport">
+                </label>
+
+                <label for="Film">Film en Entertainment
+                    <input type="checkbox" id="Film">
+                </label>
+
+                <label for="Dieren">Dieren en Natuur
+                    <input type="checkbox" id="Dieren">
+                </label>
+
+                <label for="Huis">Huis en Tuin
+                    <input type="checkbox" id="Huis">
+                </label>
+
+                <label for="Avontuur">Avontuur en Ontdekking
+                    <input type="checkbox" id="Avontuur">
                 </label>
 
                 <h3>Geselecteerde categorieën:</h3>
@@ -75,14 +95,14 @@
             </fieldset> 
 
             <fieldset>
-                <h2>Stap 5 - Initiatief Overzicht</h2>
+                <h2>Stap 5<br><span class="capsLock extraBold">Initiatief overzicht</span></h2>
 
                 <label for="Controle">
                 <input type="checkbox" id="Controle" required>
                     Ik heb alles gecontroleerd en is correct
                 </label>
 
-                <button type="submit">
+                <button type="submit" class="extraBold">
                     Aanvraag indienen
                 </button>
             </fieldset> 

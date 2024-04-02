@@ -75,17 +75,19 @@
   
                 <% if (database.start_date) { %>
                   <p>
-                    <span><%= database.start_date %>
+                    <span class="descriptionDate">
+                      <%= database.start_date %>
                     <% if (database.end_date) { %>
-                      tot <%= database.end_date %></span>
+                      tot <%= database.end_date %>
+                    </span>
                     <% } %>
                   </p>
                 <% } %>
                 
-                <p><%- database.short_description %></p>
+                <p class="descriptionText"><%- database.short_description %></p>
               </div>
   
-              <a href="/initiatief/<%= database.id %>"><button class="capsLock extraBold">Meer informatie</button></a>
+              <a href="/initiatief/<%= database.id %>"><button class="extraBold">Meer informatie</button></a>
             </li>
           <% } %>
         <% }) %>

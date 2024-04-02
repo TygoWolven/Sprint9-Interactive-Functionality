@@ -9,7 +9,7 @@
     /* === Colors === */
     --black: #151515;
     --green: rgb(110, 110, 85);
-    --red: rgb(140, 100, 70);
+    --red: rgb(150, 100, 80);
 
     --white: #EEEEEE;
     --lightgrey: #DBDBDB;
@@ -48,6 +48,32 @@
 /* === General Element Styling === */
 i {
     font-size: 2em;
+}
+
+button {
+    position: relative;
+    background: var(--green);
+    border: none;
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 1em;
+    overflow: hidden;
+    color: var(--white);
+    z-index: 50;
+    font-size: 16px;
+}
+
+button::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 90%;
+    width: 110%;
+    height: 100%;
+    background: var(--red);
+    transform: skew(15deg);
+    transition: var(--tran2);
+    z-index: -20;
 }
 
 /* === General Page Styling === */
@@ -309,42 +335,62 @@ section {
 
 .activityItem {
     margin: 1em;
-    text-align: center;
+    width: 30em;
+    height: 20em;
 
-    max-width: 23em;
+    position: relative;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     transition: var(--tran1);
 
     display: grid;
-    grid-template-rows: 4fr 3fr 1fr;
+    grid-template-areas: 
+    "img title"
+    "img date"
+    "img description"
+    "img moreinfo";
+
+    & h3 {
+        grid-area: title;
+    }
 
     & img {
-        width: 21em;
-        height: 15em;
-        margin: 1em;
+        height: 19em;
+        width: 10em;
         object-fit: cover;
+        margin: 0.5em 0 0.5em 0.5em;
+        grid-area: img;
     }
     
     & .description {
         margin: 1em;
 
-        & p {
+        & p:first-of-type {
             margin: 0.5em 0;
         }
     }
 
     & button {
-        background: none;
-        border: none;
+        grid-area: moreinfo;
+        position: absolute;
+        bottom: 0.5em;
+        width: 90%;
+        left: 1em;
     }
+}
+
+.descriptionDate {
+    grid-area: date;
+}
+
+.descriptionText {
+    grid-area: description;
 }
 
 #listVraag,
 #listAanbod {
+    width: 100%;
     display: none;
     overflow: scroll;
-    width: 100%;
-    justify-content: center;
 }
 #listError {
     text-align: center;
@@ -386,38 +432,21 @@ section {
 #submitContent {
     padding: 3em;
     z-index: 100;
-
-    & button {
-        position: relative;
-        background: var(--green);
-        border: none;
-        width: 100%;
-        padding: 0.75em;
-        margin-top: 1em;
-        overflow: hidden;
-        color: var(--white);
-        z-index: 50;
-        font-size: 16px;
-    }
-
-    & button::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        right: 90%;
-        width: 110%;
-        height: 100%;
-        background: var(--red);
-        transform: skew(15deg);
-        transition: var(--tran2);
-        z-index: -20;
-    }
 }
 
 /* === Submit Form Section === */
 #submitform {
     min-height: 100vh;
     height: fit-content;
+    background: var(--lightgrey);
+
+    & h2 {
+        text-align: center;
+
+        & span {
+            font-size: 1.5em;
+        }
+    }
 }
 
 form {
@@ -428,18 +457,11 @@ form {
 
         display: flex;
         flex-direction: column;
+        margin-top: 5em;
 
         & input, select {
             margin: 0.25em 0 1em 0;
         }
-    }
-
-    & fieldset + fieldset {
-        display: none;
-    }
-
-    & fieldset:valid + fieldset {
-        display: flex;
     }
 }
 
@@ -484,12 +506,12 @@ i:hover {
     scale: 1.05;
 }
 
-#submitContent button:hover {
+button:hover {
     cursor: pointer;
 }
 
 .inputcontainer label:hover::before,
-#submitContent button:hover::before {
+button:hover::before {
     right: 10%;
 }
 
