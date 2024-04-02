@@ -23,6 +23,7 @@
 
     /* === Transitions === */
     --tran1: 0.25s ease;
+    --tran2: 0.5s ease;
 }
 
 /* === General Classes === */
@@ -326,9 +327,12 @@ section {
         padding: 1em;
         width: 100%;
         margin-top: 1em;
+        overflow: hidden;
 
         & a {
             color: var(--white);
+            position: relative;
+            z-index: 50;
         }
     }
 
@@ -336,11 +340,13 @@ section {
         position: absolute;
         content: "";
         top: 0;
-        right: 110%;
+        right: 90%;
         width: 110%;
         height: 100%;
         background: var(--red);
         transform: skew(15deg);
+        transition: var(--tran2);
+        z-index: 5;
     }
 }
 
@@ -417,8 +423,8 @@ i:hover {
     scale: 1.05;
 }
 
-#submitContent button:hover {
-    right: 0;
+#submitContent button:hover::before {
+    right: 10%;
 }
 
 /* === All Transitions === */
