@@ -8,7 +8,8 @@
 :root {
     /* === Colors === */
     --black: #151515;
-    --hover: #74836E;
+    --green: rgb(110, 110, 85);
+    --red: rgb(140, 100, 70);
 
     --white: #EEEEEE;
     --lightgrey: #DBDBDB;
@@ -319,9 +320,27 @@ section {
     background: var(--lightgrey);
 
     & button {
-        background: var(--grey);
+        position: relative;
+        background: var(--green);
         border: none;
         padding: 1em;
+        width: 100%;
+        margin-top: 1em;
+
+        & a {
+            color: var(--white);
+        }
+    }
+
+    & button::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 110%;
+        width: 110%;
+        height: 100%;
+        background: var(--red);
+        transform: skew(15deg);
     }
 }
 
@@ -387,7 +406,7 @@ footer {
 /* === All Hover-States === */
 a:hover,
 i:hover {
-    color: var(--hover);
+    color: var(--green);
 }
 
 .inputcontainer label:hover {
@@ -396,6 +415,10 @@ i:hover {
 
 .activityItem:hover {
     scale: 1.05;
+}
+
+#submitContent button:hover {
+    right: 0;
 }
 
 /* === All Transitions === */
