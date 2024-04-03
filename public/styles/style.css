@@ -158,7 +158,7 @@ section {
 
 /* === Home Section === */
 #home {
-    background: url(/images/dehallen.png);
+    background: url("/images/dehallen.png");
     background-position: -50%;
 
     & p {
@@ -416,7 +416,7 @@ section {
 
 /* === Submit Service Section === */
 #submitservice {
-    background: url(/images/dekleinehallen.png);
+    background: url("/images/dekleinehallen.png");
     background-size: 70%;   
     height: 80vh;
 
