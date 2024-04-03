@@ -417,7 +417,7 @@ section {
 /* === Submit Service Section === */
 #submitservice {
     background: url(/images/dekleinehallen.png);
-    background-size: 60%;   
+    background-size: 70%;   
     height: 80vh;
 
     & p {
@@ -467,6 +467,10 @@ form {
         flex-direction: column;
         margin-top: 5em;
     }
+}
+
+input [type=text] {
+    border: none;
 }
 
 .allCategories {
