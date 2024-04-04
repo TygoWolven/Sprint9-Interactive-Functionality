@@ -15,17 +15,20 @@ Deze pagina is bedoeld als een soort Marktplaats, maar dan voor diensten in de b
 ## Beschrijving
 Mijn pagina ziet er als volgt uit:
 
-![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/95c27169-4f52-41fa-8749-281c2e1c9fcf)
+### Home Pagina
+![image](https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/ab81edf5-319a-4f23-9a3c-d7d9f5680e2d)
 
-![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/deedb58a-fec4-4740-a473-497dec36da34)
+### Home Pagina / Initiatief Aanvragen
+![image](https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/77480bc3-a648-4796-8d76-a1ed0b1e281b)
 
-![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/839a6d91-e145-4ff5-a6ce-ad347bedcda5)
+### Contact Pagina
+![image](https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/5c72a6cd-50ae-44b2-80e9-b2de40c1dd9a)
 
-![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/5a1fa785-1997-40d0-b4d6-9cb024219b7a)
+### FAQ Pagina
+![image](https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/277d58f7-cade-4021-9f17-1cd024555590)
 
-![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/183124ce-4b95-40e0-a2a7-961b1e768d05)
 
-Deze is ook live te bekijken: https://apricot-cygnet-kit.cyclic.app/
+Deze is ook live te bekijken: [https://apricot-cygnet-kit.cyclic.app/](https://gold-hatchling-hat.cyclic.app/)
 
 ## Kenmerken
 
@@ -42,7 +45,8 @@ EJS <br>
 JSON <br>
 Node.JS<br>
 
-Ik maak gebruik van een onepage-layout. Hierbij heb ik verschillende sections waarmee ik ook de navigatie heb opgezet. De bedoeling hiervan is dat elke section zijn eigen onderwerp heeft, waardoor de pagina makkelijk op te zetten is, en alles mooi ruimtelijk opgezet staat.
+### Progressive Enhancement
+Progressive Enhancement is een frontend-principe waarbij je je website opbouwt in 3 lagen. Hierbij begin je met dat de content altijd en overal te zien is, dit betekend dat het niet uit mag maken op welke browser of apparaat het bekeken wordt. Pas zodra je de core-content hebt staan op je pagina, kan je deze mooi gaan maken met CSS met wat beginnende styling. Dit is dan dus de tweede laag binnen het principe 'Progressive Enhancement'. Hierna kom je aan bij de laatste laag waarbij je leuke interacties en animaties kan gaan toevoegen om de pagina aantrekkelijk te maken voor de gebruiker, waarbij het niet erg zal zijn als deze het niet doen.
 
 ## Installatie
 Je kan aan dit project verder werken door het te forken, en vervolgens te clonen naar je lokale apparaat. Zodra je dit hebt gedaan is het belangerijk om in je Terminal (CTRL +  `) een 'npm install' uit te voeren. Hiermee maak je het mogelijk om een lokale server op te zetten om je veranderingen te bekijken. Deze lokale server start je door 'npm start'.
