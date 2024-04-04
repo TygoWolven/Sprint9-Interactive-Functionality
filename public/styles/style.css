@@ -57,6 +57,7 @@ i {
     font-size: 2em;
 }
 
+/* === Buttons === */
 button {
     position: relative;
     background: var(--green);
@@ -70,6 +71,7 @@ button {
     font-size: 16px;
 }
 
+/* === Buttons Pseudo to Animate === */
 button::before {
     position: absolute;
     content: "";
@@ -83,6 +85,7 @@ button::before {
     z-index: -20;
 }
 
+/* === Text Gradient Animation === */
 h1,
 #submitform h2 span {
     font-size: 3em;
@@ -100,6 +103,15 @@ h1,
     animation: gradientAnimation 3s linear infinite;
 }
 
+@keyframes gradientAnimation {
+    0% {
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* === General Page Styling === */
 * {
     margin: 0;
@@ -113,6 +125,7 @@ h1,
     list-style: none;
 }
 
+/* === Hiding all Scrollbars === */
 *::-webkit-scrollbar {
     display: none;
 }
@@ -157,50 +170,13 @@ section {
     overflow: hidden;
 }
 
-/* === Home Section === */
-#home {
-    background: url("/images/dehallen-min.png");
-    background-position: -50%;
-
-    & p {
-        max-width: 80ch;
-    }
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 200% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.titleWrapper {
-    position: absolute;
-    z-index: 150;
-    left: 8%;
-}
-
-#homecover {
-    z-index: -100;
-}
-
-.homeBackdrop {
-    position: absolute;
-    width: 100%;
-    height: 200%;
-    left: -45%;
-    transform: rotate(-15deg);
-    background: var(--lightgrey);
-}
-
 #submitform,
 #contact,
 #faq {
     background: var(--lightgrey);
 }
 
+/* === All White Titled Parts === */
 .shapeDividerBottom,
 .shapeDividerTop {
     position: absolute;
@@ -227,6 +203,31 @@ section {
 .shapeDividerBottom .shape-fill,
 .shapeDividerTop .shape-fill {
     fill: var(--white);
+}
+
+/* === Home Section === */
+#home {
+    background: url("/images/dehallen-min.png");
+    background-position: -50%;
+
+    & p {
+        max-width: 80ch;
+    }
+}
+
+.titleWrapper {
+    position: absolute;
+    z-index: 150;
+    left: 8%;
+}
+
+.homeBackdrop {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: -45%;
+    transform: rotate(-15deg);
+    background: var(--lightgrey);
 }
 
 .scrollIcons {
@@ -300,7 +301,6 @@ section {
     }
 }
 
-
 .inputcontainer {
     position: absolute;
     display: flex;
@@ -345,6 +345,7 @@ section {
     }
 }
 
+/* === Each Service Item === */
 .activityItem {
     margin: 1em;
     width: 30em;
@@ -398,6 +399,7 @@ section {
     grid-area: description;
 }
 
+/* === Service Lists === */
 #listVraag,
 #listAanbod {
     width: 100%;
@@ -411,7 +413,7 @@ section {
 /* === Service Detail Section === */
 #detail {
     & img {
-        width: 20em;
+        width: 10em;
     }
 }
 
@@ -528,6 +530,7 @@ input [type=text] {
     }
 }
 
+/* === FAQ Section === */
 summary {
     display: flex;
     width: fit-content;

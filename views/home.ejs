@@ -16,9 +16,10 @@
       </p>
     </div>
 
+    <!-- Grey Backdrop behind Title -->
     <div class="homeBackdrop"></div>
 
-    <!-- Scroll Icons -->
+    <!-- Scroll Hint Icons -->
     <div class="scrollIcons">
       <a href="#services">
         <p class="capsLock extraBold">Bekijk Vraag & Aanbod</p>
@@ -27,6 +28,7 @@
       </a>
     </div>
 
+    <!-- White Tilted Part -->
     <div class="shapeDividerBottom">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
@@ -34,11 +36,17 @@
     </div>
   </section>
 
+  <!-- Services Section -->
   <section id="services">
     <div>
       <div>
+        <!-- Title -->
         <h2 class="capsLock">Bekijk onze initiatieven</h2>
+
+        <!-- Description -->
         <p class="serviceP">Wij bieden een ruim aanbod aan initiatieven. Ben je op zoek naar een vraag of een aanbod?</p>
+
+        <!-- Service Selectors -->
         <div class="inputcontainer">
           <label for="vraag"
                  class="extraBold">
@@ -60,8 +68,12 @@
       </div>
     </div>
     
+    <!-- Service Lists -->
     <div>
+      <!-- No Service Selected -->
       <p id="listError">Er zijn nog geen initiatieven geselecteerd.</p>
+
+      <!-- 'Vraag' Service Selected -->
       <ul id="listVraag">
         <% hallenData.forEach(function(database) { %>
           <% if (database.type == 'vraag' ) { %>
@@ -92,7 +104,8 @@
           <% } %>
         <% }) %>
       </ul>
-  
+
+      <!-- 'Aanbod' Service Selected -->
       <ul id="listAanbod">
         <% hallenData.forEach(function(database) { %>
           <% if (database.type == 'aanbod' ) { %>
@@ -124,24 +137,30 @@
     </div>
   </section>
 
-  <!-- Submit Activity Section -->
+  <!-- Submit Service Section -->
   <section id="submitservice">
 
+    <!-- White Tilted Part -->
     <div class="shapeDividerTop">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
       </svg>
     </div>
 
+    <!-- Grey Backdrop behind Title -->
     <div class="submitBackdrop"></div>
 
-    <!-- Section Title -->
     <div id="submitContent">
+      <!-- Title -->
       <h2 class="capsLock">Of vraag zelf een initiatief aan!</h2>
+      
+      <!-- Description -->
       <p>
         Op zoek naar een balonnenclown? DJ voor een huisfeest? Het maakt niet uit wat! Vul dan het 
         formulier in, en wie weet vind je de juiste persoon waar jij naar op zoek bent.
       </p>  
+
+      <!-- Submit Service Button -->
       <a href="/aanvraag">
         <button class="extraBold">
           Naar formulier
