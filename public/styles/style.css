@@ -441,6 +441,17 @@ section {
 
 #detailcontact {
     height: 40vh;
+    flex-direction: row;
+
+    & img {
+        width: 15em;
+        border-radius: 50%;
+        margin-right: 5em;
+    }
+
+    & p {
+        max-width: 62ch;
+    }
 }
 
 #terugButton {
@@ -568,6 +579,7 @@ summary {
     display: flex;
     width: fit-content;
     align-items: center;
+    cursor: pointer;
 
     padding: 1em;
 
