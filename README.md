@@ -25,7 +25,7 @@ Mijn pagina ziet er als volgt uit:
 
 ![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/183124ce-4b95-40e0-a2a7-961b1e768d05)
 
-Deze is ook live te bekijken: https://apricot-cygnet-kit.cyclic.app/
+Deze is ook live te bekijken: [https://apricot-cygnet-kit.cyclic.app/](https://gold-hatchling-hat.cyclic.app/)
 
 ## Kenmerken
 
