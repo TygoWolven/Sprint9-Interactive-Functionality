@@ -43,7 +43,7 @@ JSON <br>
 Node.JS<br>
 
 ### Progressive Enhancement
-Progressive Enhancement is een frontend-principe waarbij je je website opbouwt in 3 lagen. Hierbij begin je met dat de content altijd en overal te zien is, dit betekend dat het niet uit mag maken op welke browser of apparaat het bekeken wordt. Pas zodra je de core-content hebt staan op je pagina, kan je deze mooi gaan maken met CSS met wat beginnende styling. Hierna kom je aan bij de laatste laag waarbij je leuke interacties en animaties kan gaan toevoegen om de pagina aantrekkelijk te maken voor de gebruiker.
+Progressive Enhancement is een frontend-principe waarbij je je website opbouwt in 3 lagen. Hierbij begin je met dat de content altijd en overal te zien is, dit betekend dat het niet uit mag maken op welke browser of apparaat het bekeken wordt. Pas zodra je de core-content hebt staan op je pagina, kan je deze mooi gaan maken met CSS met wat beginnende styling. Dit is dan dus de tweede laag binnen het principe 'Progressive Enhancement'. Hierna kom je aan bij de laatste laag waarbij je leuke interacties en animaties kan gaan toevoegen om de pagina aantrekkelijk te maken voor de gebruiker, waarbij het niet erg zal zijn als deze het niet doen.
 
 ## Installatie
 Je kan aan dit project verder werken door het te forken, en vervolgens te clonen naar je lokale apparaat. Zodra je dit hebt gedaan is het belangerijk om in je Terminal (CTRL +  `) een 'npm install' uit te voeren. Hiermee maak je het mogelijk om een lokale server op te zetten om je veranderingen te bekijken. Deze lokale server start je door 'npm start'.
