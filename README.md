@@ -15,15 +15,15 @@ Deze pagina is bedoeld als een soort Marktplaats, maar dan voor diensten in de b
 ## Beschrijving
 Mijn pagina ziet er als volgt uit:
 
-![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/95c27169-4f52-41fa-8749-281c2e1c9fcf)
+### Home Pagina
+![image](https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/ab81edf5-319a-4f23-9a3c-d7d9f5680e2d)
 
-![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/deedb58a-fec4-4740-a473-497dec36da34)
+### Contact Pagina
+![image](https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/5c72a6cd-50ae-44b2-80e9-b2de40c1dd9a)
 
-![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/839a6d91-e145-4ff5-a6ce-ad347bedcda5)
+### FAQ Pagina
+![image](https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/277d58f7-cade-4021-9f17-1cd024555590)
 
-![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/5a1fa785-1997-40d0-b4d6-9cb024219b7a)
-
-![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/183124ce-4b95-40e0-a2a7-961b1e768d05)
 
 Deze is ook live te bekijken: [https://apricot-cygnet-kit.cyclic.app/](https://gold-hatchling-hat.cyclic.app/)
 
