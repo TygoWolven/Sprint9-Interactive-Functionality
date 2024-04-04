@@ -18,6 +18,9 @@ Mijn pagina ziet er als volgt uit:
 ### Home Pagina
 ![image](https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/ab81edf5-319a-4f23-9a3c-d7d9f5680e2d)
 
+### Home Pagina / Initiatief Aanvragen
+![image](https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/77480bc3-a648-4796-8d76-a1ed0b1e281b)
+
 ### Contact Pagina
 ![image](https://github.com/TygoWolven/Sprint9-Interactive-Functionality/assets/144010858/5c72a6cd-50ae-44b2-80e9-b2de40c1dd9a)
 
