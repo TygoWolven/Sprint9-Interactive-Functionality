@@ -83,7 +83,8 @@ button::before {
     z-index: -20;
 }
 
-h1 {
+h1,
+#submitform h2 span {
     font-size: 3em;
     margin-bottom: 0.25em;
 
@@ -469,6 +470,11 @@ form {
     }
 }
 
+input, select {
+    padding: 1em;
+    border: none;
+}
+
 input [type=text] {
     border: none;
 }
@@ -492,10 +498,21 @@ input [type=text] {
         display: none;
     }
 
+    & input[type="checkbox"]:hover + label {
+        scale: 1.05;
+    }
+
     & input:checked + label {
         transition: var(--tran1);
         background: var(--red);
     }
+}
+
+.afrondText {
+    max-width: 45ch;
+    text-align: center;
+    margin-bottom: 1em;
+    align-self: center;
 }
 
 /* === Contact Section === */
@@ -509,6 +526,46 @@ input [type=text] {
     & ul {
         margin: 0.25em 0 2em 0;
     }
+}
+
+summary {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+
+    padding: 1em;
+
+    border: 3px solid black;
+}
+
+details {
+    margin: 1em;
+
+    & p {
+        width: fit-content;
+        max-width: 70ch;
+        margin: 0;
+        padding: 2em;
+    }
+
+    & i {
+        font-size: 2em;
+        transition: var(--tran1);
+        margin-right: 0.5em;
+    }
+}
+
+details[open] summary {
+    background: var(--white);
+    border: 3px solid var(--white);
+}
+
+details[open] p {
+    background: var(--white);
+}
+
+details[open] i {
+    transform: rotate(45deg);
 }
 
 /* === Footer === */
