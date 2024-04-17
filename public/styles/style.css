@@ -406,7 +406,6 @@ section {
     display: none;
     overflow: scroll;
     justify-content: center;
-    flex-wrap: wrap;
 }
 #listError {
     text-align: center;
